@@ -24,11 +24,12 @@ public class WeatherForecastController : ControllerBase
         {
             titulo = "Página do web app",
             ambiente = _environment.EnvironmentName,
-            status = "Running"
+            status = "Running",
         };
 
         var resultJson = JsonConvert.SerializeObject(result);
         var html = $"<p style='font-family: arial'>{resultJson}</p>";
+        html += "<h1 style='font-family: arial;color: red'>EU TE AMO MUITO MUITO MUITO MUITO MUITO NATÁLIA S2</h1>";
 
         return Content(html, "text/html", Encoding.UTF8);
     }
